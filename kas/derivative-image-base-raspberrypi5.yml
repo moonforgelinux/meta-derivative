@@ -1,0 +1,31 @@
+header:
+  version: 16
+  includes:
+    - repo: meta-moonforge
+      file: kas/include/layer/meta-moonforge-distro.yml
+    - repo: meta-moonforge
+      file: kas/include/layer/meta-moonforge-raspberrypi.yml
+    - repo: meta-moonforge
+      file: kas/include/layer/meta-moonforge-docker.yml
+
+local_conf_header:
+  30_meta-moonforge-raspberrypi: |
+    # Specifies description file for partitioning the image
+    WKS_FILE = "moonforge-image-base-raspberrypi.wks.in"
+  20_meta-moonforge-distro: |
+    # Sets up persistent data partition
+    OVERLAYFS_ETC_DEVICE = "/dev/mmcblk0p3"
+    # Sets minimum size of the data partition
+    IMAGE_DATA_MIN_SIZE = "4096M"
+
+repos:
+  meta-moonforge:
+    url: https://github.com/moonforgelinux/meta-moonforge.git
+    commit: ce8ff3de25dda42215b7c8dfd201fd39c3960b1f
+    branch: main
+  meta-derivative:
+    layers:
+      meta-derivative-distro:
+
+distro: derivative
+machine: raspberrypi5
