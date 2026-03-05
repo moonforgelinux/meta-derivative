@@ -21,7 +21,7 @@ local_conf_header:
 repos:
   meta-moonforge:
     url: https://github.com/moonforgelinux/meta-moonforge.git
-    commit: ce8ff3de25dda42215b7c8dfd201fd39c3960b1f
+    commit: 47418fb1607909e43e8b6884be94b4e690f3a291
     branch: main
   meta-derivative:
     layers:
