@@ -2,7 +2,7 @@
 
 This is an example project for how derivative distributions can be made using the [meta-moonforge](https://github.com/moonforgelinux/meta-moonforge) Yocto layer.
 
-Check this [tutorial](./HOWTO.md) for how this derivative example was made from scratch.
+Check this [tutorial](https://moonforgelinux.org/docs/tutorials/) for how this derivative example was made from scratch.
 
 ## Setup
 
